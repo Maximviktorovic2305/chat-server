@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
    cors: {
-      origin: "http://localhost:7750",
+      origin: "http://localhost:7778",
       methods: ["GET", "POST"],
    },
 });
@@ -37,6 +37,6 @@ io.on("connection", (socket) => {
    });
 });
 
-server.listen(7000, () => {
+server.listen(7777, () => {
    console.log("Server is running");
 });
